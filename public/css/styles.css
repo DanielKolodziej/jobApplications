@@ -1,0 +1,67 @@
+/*!important flag only to override existing materialize classes*/
+h1 {
+  padding-bottom: 3rem;
+}
+.slides {
+  background-color: white !important;
+}
+.spinner-1:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 60px;
+  width: 60px;
+  margin-left: -30px;
+  margin-top: -30px;
+  border-radius: 50%;
+  border: 4px solid lightgray;
+  border-top-color: teal;
+  animation: spinner 0.7s linear infinite;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+#jobs tr:hover {
+  background: rgba(21, 21, 21, 0.125);
+}
+.editField:hover,
+.editField:focus {
+  border-bottom: 3px solid #ffc107 !important;
+}
+.editItem,
+.delItem {
+  font-size: 2.1rem;
+}
+.editing {
+  color: #ffc107 !important;
+}
+
+.editItem:hover {
+  color: #ffc107 !important;
+  text-shadow: 2px 2px 4px #00000096;
+}
+.delItem:hover {
+  color: red !important;
+  text-shadow: 2px 2px 4px #00000096;
+}
+/*wont work because of spacing, blank is the correct selector but unavailable to use*/
+#jobs:empty:after {
+  content: "No listed after jobs....";
+  width: 200px !important;
+  height: 200px;
+  background-color: red !important;
+}
+footer {
+  margin-top: 2rem;
+}
+.img-black {
+  background-color: rgb(21, 21, 21);
+}
+.img-black img {
+  opacity: 0.5;
+}
