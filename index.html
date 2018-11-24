@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>My Job Applications</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Icon link -->
+    <link rel="icon" href="images/jobDashIcon.PNG" />
+    <!-- Materialize cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!-- Materialize Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- nav section -->
+    <nav>
+      <div class="nav-wrapper teal">
+        <a href="#" class="brand-logo"
+          ><i class="material-icons">assignment</i></a
+        >
+        <ul class="right hide-on-small-only">
+          <li><a href="#form">Add</a></li>
+          <li><a href="#jobs">List</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <h1 class="z-depth-3 center">Job Dashboard</h1>
+      <!-- Slider Section -->
+      <div class="slider">
+        <ul class="slides">
+          <li>
+            <div class="img-black"><img src="images/notebook.jpeg" /></div>
+            <div class="caption center-align">
+              <i class="medium material-icons green-text">add_box</i>
+              <h4 class="white-text">
+                Add any new job listing with valid inputs.
+              </h4>
+            </div>
+          </li>
+          <li>
+            <div class="img-black"><img src="images/paper.jpeg" /></div>
+            <div class="caption left-align">
+              <i class="medium material-icons amber-text">edit</i>
+              <h4 class="white-text">
+                Edit any existing job listing with valid inputs.
+              </h4>
+            </div>
+          </li>
+          <li>
+            <div class="img-black"><img src="images/book.jpeg" /></div>
+            <div class="caption right-align">
+              <i class="medium material-icons red-text">delete</i>
+              <h4 class="white-text">
+                Delete any job listing upon confirmation.
+              </h4>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- form section to add/edit jobs -->
+      <form id="form" action="#" class="card-panel scrollspy">
+        <input id="date" type="text" placeholder="Date" />
+        <input id="comp" type="text" placeholder="Company" />
+        <input id="pos" type="text" placeholder="Position" />
+        <input id="sal" type="text" placeholder="Salary" />
+        <a id="addBtn" class="btn-large disabled"
+          ><i class="material-icons right">add_circle</i>Add Job</a
+        >
+      </form>
+      <!-- filter section with dropdown select -->
+      <div class="row">
+        <input
+          class="col s9"
+          id="filterInput"
+          type="text"
+          placeholder="Seach by Company..."
+        />
+        <div class="col s3">
+          <select id="options">
+            <option value="0">Date</option>
+            <option value="1" selected>Company</option>
+            <option value="2">Position</option>
+          </select>
+        </div>
+      </div>
+      <!-- table section containing job listings -->
+      <table class="card-panel responsive-table">
+        <thead class="teal white-text">
+          <tr>
+            <th>Date</th>
+            <th>Company</th>
+            <th>Position</th>
+            <th>Salary</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <!-- As of now contains example/filler rows just for show -->
+        <!--
+          rows contain date, company, position, salary, edit/delete buttons
+        -->
+        <tbody id="jobs" class="teal lighten-5 scrollspy">
+          <tr>
+            <td>11/13/2018</td>
+            <td>Google</td>
+            <td>Full-Stack Developer</td>
+            <td>70,000</td>
+            <td>
+              <a href="#form" class="scrollspy"
+                ><i class="material-icons editItem">edit</i></a
+              ><i class="material-icons red-text text-lighten-3 delItem"
+                >delete</i
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>11/02/2018</td>
+            <td>Facebook</td>
+            <td>UI Designer</td>
+            <td>50,000</td>
+            <td>
+              <a href="#form" class="scrollspy"
+                ><i class="material-icons editItem">edit</i></a
+              ><i class="material-icons red-text text-lighten-3 delItem"
+                >delete</i
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- footer section for auther/contact info -->
+    <footer class="page-footer black">
+      <div class="container">
+        <div class="footer-copyright">
+          <h6>Daniel Kolodziej &copy; 2018</h6>
+          <p class="right">dankolodziej3773@yahoo.com</p>
+        </div>
+      </div>
+    </footer>
+    <!-- materialize js cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
